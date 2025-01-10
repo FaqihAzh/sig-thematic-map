@@ -12,7 +12,7 @@
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 10,
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> Faqih Azhar'
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> Faqih | Rafi | Bayu'
     }).addTo(map);
 
     function getColor(sebaran_pelajar) {
