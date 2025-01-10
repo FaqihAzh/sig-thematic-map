@@ -1,0 +1,43 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Kota A",
+                "density": 100
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [110.0, -7.0],
+                        [110.5, -7.0],
+                        [110.5, -7.5],
+                        [110.0, -7.5],
+                        [110.0, -7.0]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Kota B",
+                "density": 200
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [110.6, -7.0],
+                        [111.0, -7.0],
+                        [111.0, -7.5],
+                        [110.6, -7.5],
+                        [110.6, -7.0]
+                    ]
+                ]
+            }
+        }
+    ]
+}
