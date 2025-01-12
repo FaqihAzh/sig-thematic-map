@@ -2,9 +2,33 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class GeoData extends Model
 {
-    //
+    use HasFactory;
+
+    protected $fillable = [
+        'province_id',
+        'regency_id',
+        'capital',
+        'year',
+        'population',
+        'area',
+        'male_population',
+        'female_population',
+        'student',
+        'tpt',
+    ];
+
+    public function province()
+    {
+        return $this->belongsTo(Province::class);
+    }
+
+    public function regency()
+    {
+        return $this->belongsTo(Regency::class);
+    }
 }

@@ -16,11 +16,9 @@
     }).addTo(map);
 
     function getColor(kepadatan) {
-        return kepadatan > 150 ? '#800026' :
-               kepadatan > 100 ? '#BD0026' :
-               kepadatan > 50  ? '#E31A1C' :
-               kepadatan > 20  ? '#FC4E2A' :
-               kepadatan > 10  ? '#FD8D3C' :
+        return kepadatan > 1000  ? '#E31A1C' :
+               kepadatan > 500  ? '#FC4E2A' :
+               kepadatan > 100  ? '#FD8D3C' :
                                  '#FFEDA0';
     }
 
@@ -105,7 +103,7 @@
     var legend = L.control({ position: 'bottomright' });
     legend.onAdd = function (map) {
         var div = L.DomUtil.create('div', 'info legend'),
-            grades = [0, 10, 20, 50, 100, 150],
+            grades = [0, 100, 500, 1000],
             labels = [];
 
         for (var i = 0; i < grades.length; i++) {

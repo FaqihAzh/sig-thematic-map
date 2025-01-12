@@ -41,7 +41,7 @@
 
     </style>
 </head>
-<body class="bg-gray-100 h-screen flex items-center justify-center relative w-full">
+<body class="bg-gray-100 h-screen flex items-center justify-center relative w-full overflow-x-hidden">
 
     <div class="absolute top-4 left-4 md:top-6 md:left-6 space-y-2 z-10 w-[100vw]">
         <div class="flex gap-2 w-full max-w-[90%]">
@@ -52,7 +52,7 @@
                 <i id="menu-icon" class="material-icons-round text-gray-700">menu</i>
                 <i id="close-icon" class="material-icons-round hidden text-gray-700">close</i>
             </div>
-            <div class="bg-white rounded-full shadow-lg px-4 md:px-8 h-14 w-full md:w-auto items-center font-medium flex text-xs !text-center md:text-left leading-4 md:leading-normal md:text-base">@yield('title', 'Peta Tematik')</div>
+            <div class="justify-center bg-white rounded-full shadow-lg px-4 md:px-8 h-14 w-full md:w-auto items-center font-medium flex text-xs !text-center md:text-left leading-4 md:leading-normal md:text-base">@yield('title', 'Peta Tematik')</div>
         </div>
         <div
             id="navigation-menu"

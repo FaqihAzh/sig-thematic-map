@@ -15,4 +15,14 @@ class Province extends Model
         'latitude',
         'longitude',
     ];
+
+    public function regencies()
+    {
+        return $this->hasMany(Regency::class);
+    }
+
+    public function geoData()
+    {
+        return $this->hasMany(GeoData::class);
+    }
 }

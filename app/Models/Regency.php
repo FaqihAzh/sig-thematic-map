@@ -15,4 +15,9 @@ class Regency extends Model
     {
         return $this->belongsTo(Province::class);
     }
+
+    public function geoData()
+    {
+        return $this->hasMany(GeoData::class);
+    }
 }
