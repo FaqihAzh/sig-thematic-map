@@ -6,6 +6,7 @@
     <title>@yield('title', 'Peta Tematik')</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 
     @vite('resources/css/app.css')
@@ -51,13 +52,17 @@
                 <i id="menu-icon" class="material-icons-round text-gray-700">menu</i>
                 <i id="close-icon" class="material-icons-round hidden text-gray-700">close</i>
             </div>
-            <div class="bg-white rounded-full shadow-lg px-4 md:px-8 h-14 w-full md:w-auto items-center font-medium flex text-xs text-center md:text-left leading-4 md:leading-normal md:text-base">@yield('title', 'Peta Tematik')</div>
+            <div class="bg-white rounded-full shadow-lg px-4 md:px-8 h-14 w-full md:w-auto items-center font-medium flex text-xs !text-center md:text-left leading-4 md:leading-normal md:text-base">@yield('title', 'Peta Tematik')</div>
         </div>
         <div
             id="navigation-menu"
             class="bg-white rounded-lg shadow-lg p-2 w-fit hidden z-10"
         >
             <div class="flex flex-col gap-0 md:gap-2">
+                <a href="{{ url('/') }}" class="text-sm md:text-base flex items-center gap-2 px-3 py-2 text-gray-800 hover:bg-gray-100 rounded-md">
+                    <i class="material-icons-round text-gray-400">map</i>
+                    Provinsi di Indonesia
+                </a>
                 <a href="{{ url('/thematic-map/sulsel/density') }}" class="text-sm md:text-base flex items-center gap-2 px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">
                     <i class="material-icons-round text-gray-400">location_city</i>
                     Kepadatan Penduduk
@@ -69,6 +74,10 @@
                 <a href="{{ url('/thematic-map/sulsel/student') }}" class="text-sm md:text-base flex items-center gap-2 px-3 py-2 text-gray-800 hover:bg-gray-100 rounded-md">
                     <i class="material-icons-round text-gray-400">school</i>
                     Sebaran Pelajar
+                </a>
+                <a href="{{ url('/ina/earthquakes') }}" class="text-sm md:text-base flex items-center gap-2 px-3 py-2 text-gray-800 hover:bg-gray-100 rounded-md">
+                    <i class="material-symbols-outlined text-gray-400">earthquake</i>
+                    Sebaran Gempa Terkini
                 </a>
             </div>
         </div>
