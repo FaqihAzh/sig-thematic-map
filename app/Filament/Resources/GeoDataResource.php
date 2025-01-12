@@ -97,15 +97,15 @@ class GeoDataResource extends Resource
                 Tables\Columns\TextColumn::make('capital')->label('Capital'),
                 Tables\Columns\TextColumn::make('year')->label('Year'),
                 Tables\Columns\TextColumn::make('population')->label('Population'),
-                Tables\Columns\TextColumn::make('area')->label('Area (km²)'),
+                Tables\Columns\TextColumn::make('area')->label('Area'),
                 Tables\Columns\TextColumn::make('density')
-                    ->label('Density (people/km²)')
+                    ->label('Density')
                     ->getStateUsing(fn ($record) => number_format($record->density, 2)),
-                Tables\Columns\TextColumn::make('male_population')->label('Male Population'),
-                Tables\Columns\TextColumn::make('female_population')->label('Female Population'),
+                Tables\Columns\TextColumn::make('male_population')->label('Male'),
+                Tables\Columns\TextColumn::make('female_population')->label('Female'),
                 Tables\Columns\TextColumn::make('student')->label('Student'),
                 Tables\Columns\TextColumn::make('student_distribution')
-                    ->label('Student Distribution (students/km²)')
+                    ->label('Student Distribution')
                     ->getStateUsing(fn ($record) => number_format($record->student_distribution, 2)),
                 Tables\Columns\TextColumn::make('tpt')->label('TPT'),
             ])
