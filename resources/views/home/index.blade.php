@@ -19,6 +19,16 @@
         L.marker([province.latitude, province.longitude]).addTo(map).bindPopup(province.name);
     })
 
+    const title = "Data Provinsi di Indonesia";
+        const headers = ['Provinsi', 'Latitude', 'Longitude'];
+        const properties = ['Provinsi', 'Latitude', 'Longitude'];
+        const tableData = provinces.map(province => ({
+            Provinsi: province.name,
+            Latitude: province.latitude,
+            Longitude: province.longitude
+        }));
+        dataTable(title, headers, properties, tableData);
+
     L.control.scale().addTo(map);
 </script>
 @endpush

@@ -16,6 +16,7 @@
     let getEarthquakeData = {!! file_get_contents('https://data.bmkg.go.id/DataMKG/TEWS/gempaterkini.json') !!}
 
     let earthquakeData = getEarthquakeData.Infogempa.gempa;
+
     earthquakeData.forEach(item => {
         let coordinat = item.Coordinates.split(",");
         let latitude = coordinat[0];
@@ -58,5 +59,17 @@
             )
         .openPopup();
     })
+
+    const title = "Data Gempa Terkini di Indonesia";
+        const headers = ['Wilayah', 'Waktu', 'Magnitude', 'Latitude', 'Longitude'];
+        const properties = ['Wilayah', 'Waktu', 'Magnitude', 'Latitude', 'Longitude'];
+        const tableData = earthquakeData.map(ed => ({
+            Wilayah: ed.Wilayah,
+            Waktu: ed.Tanggal + " " + ed.Jam,
+            Magnitude: ed.Magnitude,
+            Latitude: ed.Coordinates.split(",")[0],
+            Longitude: ed.Coordinates.split(",")[1]
+        }));
+        dataTable(title, headers, properties, tableData);
 </script>
 @endpush

@@ -84,14 +84,24 @@
 
     let geojsonLayer;
     fetch('/geojson/prov-sulut.geojson')
-        .then(response => response.json())
-        .then(data => {
-            geojsonLayer = L.geoJSON(data, {
-                style: style,
-                onEachFeature: onEachFeature
-            }).addTo(map);
-        })
-        .catch(error => console.error('Error fetching GeoJSON:', error));
+    .then(response => response.json())
+    .then(data => {
+        geojsonLayer = L.geoJSON(data, {
+            style: style,
+            onEachFeature: onEachFeature
+        }).addTo(map);
+
+        const title = "Data Tingkat Pengguran Terbuka";
+        const headers = ['Kabupaten/Kota', 'TPT (%)'];
+        const properties = ['Kabupaten', 'tpt'];
+        const tableData = data.features.map(feature => ({
+            Kabupaten: feature.properties.Kabupaten,
+            tpt: feature.properties.tpt
+        }));
+        dataTable(title, headers, properties, tableData);
+    })
+    .catch(error => console.error('Error fetching GeoJSON:', error));
+
 
     var legend = L.control({ position: 'bottomright' });
     legend.onAdd = function (map) {

@@ -30,7 +30,7 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
     .leaflet-control-container .leaflet-left .leaflet-control-zoom {
         left: 0.5rem;
         bottom: 0.5rem;
@@ -39,5 +39,9 @@ body {
     .legend {
         right: 0.5rem;
         bottom: 0.5rem;
+    }
+
+    .leaflet-control-zoom {
+        display: none;
     }
 }
